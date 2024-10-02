@@ -1,0 +1,18 @@
+   #!/bin/bash
+   # Skript, mis väljastab tärnide ja "o" sümbolite kujundi vastavalt kasutaja sisestatud ridade arvule
+
+   read -p "Sisesta ridade arv: " rows  # Küsib kasutajalt ridade arvu
+
+   for (( i=1; i<=rows; i++ )); do  # Tsükkel ridade jaoks
+       echo -n "$i. "  # Väljastab rea numbri
+
+       for (( j=1; j<=(rows-i); j++ )); do  # Väljastab "o" sümbolid
+           echo -n "o "  # Väljastab "o"
+       done
+
+       for (( k=1; k<=i; k++ )); do  # Väljastab tärnid
+           echo -n "* "  # Väljastab tärni
+       done
+
+       echo ""  # Uus rida
+   done

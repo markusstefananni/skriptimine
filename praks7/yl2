@@ -1,0 +1,13 @@
+   #!/bin/bash
+   # Skript, mis väljastab kasutaja määratud arvu ridasid ja sümboleid
+
+   read -p "Sisesta ridade arv: " rows  # Küsib kasutajalt ridade arvu
+   read -p "Sisesta tärnide arv reas: " stars  # Küsib kasutajalt tärnide arvu
+
+   for (( i=1; i<=rows; i++ )); do  # Tsükkel ridade jaoks
+       echo -n "$i. "  # Väljastab rea numbri
+       for (( j=1; j<=stars; j++ )); do  # Tsükkel tärnide jaoks
+           echo -n "* "  # Väljastab tärni
+       done
+       echo ""  # Uus rida
+   done

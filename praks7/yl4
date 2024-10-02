@@ -1,0 +1,11 @@
+   #!/bin/bash
+   # Skript, mis väljastab tärnide kujundi vastavalt kasutaja sisestatud ridade arvule
+
+   read -p "Sisesta ridade arv: " rows  # Küsib kasutajalt ridade arvu
+
+   for (( i=1; i<=rows; i++ )); do  # Tsükkel ridade jaoks
+       for (( j=1; j<=i; j++ )); do  # Tsükkel tärnide jaoks
+           echo -n "* "  # Väljastab tärni
+       done
+       echo ""  # Uus rida
+   done

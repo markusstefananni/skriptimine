@@ -1,0 +1,10 @@
+   #!/bin/bash
+   # Skript, mis väljastab 5 rida tärne
+
+   for (( i=1; i<=5; i++ )); do  # Tsükkel 5 rida jaoks
+       echo -n "$i. "  # Väljastab rea numbri
+       for (( j=1; j<=5; j++ )); do  # Tsükkel 5 tärni jaoks
+           echo -n "* "  # Väljastab tärni
+       done
+       echo ""  # Uus rida
+   done
