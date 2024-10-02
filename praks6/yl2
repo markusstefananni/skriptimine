@@ -1,0 +1,14 @@
+   #!/bin/bash
+   # Skript arvutab sisestatud arvu numbrite summa
+
+   read -p "Sisesta suvaline täisarv: " number
+   sum=0
+   abs_number=${number#-}  # Eemaldab miinusmärgi, kui see on olemas
+
+   while [ $abs_number -gt 0 ]; do   #kasutasin muutujat gt(greater than), saaks kasutada muutujat ne(not equal)
+       digit=$((abs_number % 10))  # Võtab viimase numbri
+       sum=$((sum + digit))         # Lisab numbri summale
+       abs_number=$((abs_number / 10))  # Eemaldab viimase numbri
+   done
+
+   echo "Arvu $number numbrite summa on $sum"
