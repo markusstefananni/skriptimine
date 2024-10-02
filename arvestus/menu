@@ -1,0 +1,29 @@
+#!/bin/bash
+#markus-Stefan Anni
+#See skript(menu)kuvab menüü ja vastavalt kasutaja valikule toidu kirjelduse
+
+# Kuvame menüü
+echo "Vali toit:"
+echo "1) Liha ja kartulid"
+echo "2) Kala ja krõpsud"
+echo "3) Supp ja salat"
+# Küsime kasutajalt valiku numbrit
+read -p "Tee oma valik (1 või 2 või 3): " osch  # osch: kasutaja valiku number
+
+# Vastavalt valikule kuvame toidu kirjelduse
+if [[ "$osch" == "1" ]]; then
+    # Kirjeldus valik 1
+    echo "Väga maitsev, aga jälgi oma tervist!"
+    echo "Head isu!"
+elif [[ "$osch" == "2" ]]; then
+    # Kirjeldus valik 2
+    echo "Brititoit on maitsev!"
+    echo "Head isu!"
+elif [[ "$osch" == "3" ]]; then
+    # Kirjeldus valik 3
+    echo "Nii tervislik ja igav..."
+    echo "Head isu!"
+else
+    # Kui kasutaja sisestab vale numbri
+    echo "Palun vali kehtiv number (1, 2 või 3)."
+fi

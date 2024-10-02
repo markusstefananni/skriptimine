@@ -1,0 +1,16 @@
+#!/bin/bash
+#markus-stefan anni
+# Skript(kujund), mis väljastab tärnide kujundi vastavalt kasutaja sisestatud ridade arvule, alustades suurimast
+
+read -p "Sisesta ridade arv: " rows  # Küsib kasutajalt ridade arvu
+# Tsükkel ridade jaoks alates suuremast
+# 1. for (( i=rows; i>=1; i-- )):
+#    - i=rows: Tsükli alguses määratakse muutuja i väärtuseks kasutaja sisestatud ridade arv (rows).
+#    - i>=1: Tsükkel jätkub seni, kuni i on suurem või võrdne 1.
+#    - i--: Iga tsükli iteratsiooni järel väheneb i väärtus ühe võrra.
+for (( i=rows; i>=1; i-- )); do  # Tsükkel ridade jaoks alates suurimast
+    for (( j=1; j<=i; j++ )); do  # Tsükkel tärnide jaoks
+        echo -n "* "  # Väljastab tärni
+    done
+    echo ""  # Uus rida
+done

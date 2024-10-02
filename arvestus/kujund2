@@ -1,0 +1,29 @@
+#!/bin/bash
+# MarkusŚtefan Anni
+# Skript(kujund2), küsib kujundi ridade arvu ja trükib kujundi, mis koosneb vastavast ridade arvust
+# Küsi kasutajalt, kui palju ridasid kujundis soovitakse
+read -p "Sisestage ridade arv: " rows
+
+# Tsükkel, et trükkida pööratud kujund, alustades viimasest reast
+for ((i=rows; i>=1; i--)); do
+    # Trüki juhtivad tähed (tärnid) antud real
+    # 'i' määrab, kui palju tärne trükitakse, alustades 'rows' väärtusest
+    for ((k=1; k<=i; k++)); do
+        echo -n "*"  # Trükib tärni ilma reavahetuseta
+    done
+    
+    # Trüki tühikud, et luua vahe tärnide vahel
+    # (rows-i) arv tühikute rida, korrutatud 2-ga, et luua piisav vahe
+    for ((j=1; j<=(rows-i)*2; j++)); do
+        echo -n " "  # Trükib tühiku ilma reavahetuseta
+    done
+    
+    # Trüki tagumised tähed (tärnid) antud real
+    # 'i' määrab, kui palju tärne trükitakse, sama palju kui juhtivate tärnide puhul
+    for ((k=1; k<=i; k++)); do
+        echo -n "*"  # Trükib tärni ilma reavahetuseta
+    done
+    
+    # Mine järgmisele reale, et alustada uut rida
+    echo  # Trükib reavahetuse, et alustada uut rida
+done

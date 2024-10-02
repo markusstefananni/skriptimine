@@ -1,0 +1,16 @@
+#!/bin/bash
+#Markus-Stefan Anni
+#See skript(info) tervitab kasutajat tema nimega ja väljastab kuupäeva ja aja
+
+#Valjastame tere ilma reavahetuseta
+echo -n "Tere, "
+
+#Tekitame kasutajanime, mis kuvatakse suure tahega
+kasutajanimi=$(whoami)
+echo -n "$(echo ${kasutajanimi^})"
+#Valjastame kasutaja nime ilma reavahetuseta
+echo -n "$username"
+#Valjastame "!" reavahetusega
+echo "!"
+# Kuvame tänase kuupäeva ja kellaaja
+echo "Täna on $(date +"%d.%m.%Y kell %H:%M")"
